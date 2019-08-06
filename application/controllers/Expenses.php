@@ -16,8 +16,9 @@ class Expenses extends CI_Controller {
     public function expenses_category(){
         $data = array();
         $data['page_title'] = 'expenses category';
-        $data['result']= $this->_post_api($data, 'http://honey-bee.life/Financial_Api/expenses_category','GET');
-       
+//        $data['result']= $this->_post_api($data, 'http://honey-bee.life/Financial_Api/expenses_category','GET');
+        $data['result']= $this->_post_api($data, 'http://localhost/honey_bee/Financial_Api/expenses_category','GET');
+
 
         $data['main_content'] = $this->load->view('expenses/expenses_category', $data, TRUE);
        
@@ -72,8 +73,10 @@ class Expenses extends CI_Controller {
         
         $data['page_title'] = 'expenses sub category';
         $id=$this->uri->segment(3);
-        $data['result']= $this->_post_api($data, 'http://honey-bee.life//Financial_Api/expenses_category_byid?id='.$id,'GET');
-        $data['category']= $this->_post_api($data, 'http://honey-bee.life//Financial_Api/expenses_category','GET');
+//        $data['result']= $this->_post_api($data, 'http://honey-bee.life//Financial_Api/expenses_category_byid?id='.$id,'GET');
+        $data['result']= $this->_post_api($data, 'http://localhost/honey_bee//Financial_Api/expenses_category_byid?id='.$id,'GET');
+//        $data['category']= $this->_post_api($data, 'http://honey-bee.life//Financial_Api/expenses_category','GET');
+        $data['category']= $this->_post_api($data, 'http://localhost/honey_bee//Financial_Api/expenses_category','GET');
         $data['main_content'] = $this->load->view('expenses/expenses_sub_category', $data, TRUE);
        
 
@@ -100,7 +103,8 @@ class Expenses extends CI_Controller {
     //  'user_id'=>$this->session->userdata('id')
      'user_id'=>1
         );
-       $result=$this->_post_api($data, 'http://honey-bee.life//Financial_Api/addexpenses','POST');
+//       $result=$this->_post_api($data, 'http://honey-bee.life//Financial_Api/addexpenses','POST');
+       $result=$this->_post_api($data, 'http://localhost/honey_bee//Financial_Api/addexpenses','POST');
        if($result['code']=='1'){
         redirect(base_url() . 'expenses/expenses_list', 'refresh');
        }

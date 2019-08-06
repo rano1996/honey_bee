@@ -244,8 +244,7 @@
                 </div> 	
 				
 				
-				
-				
+
 				<!--  row    ->
                <?php echo $main_content; ?>
                 <!-- /.row -->

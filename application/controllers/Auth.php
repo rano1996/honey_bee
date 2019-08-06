@@ -54,8 +54,9 @@ $params = array(
     'password' => $this->input->post('password'),
     
     );
-    $result = $this->_post_api($params, 'http://honey-bee.life//api/login','POST');
-    
+//    $result = $this->_post_api($params, 'http://honey-bee.life//api/login','POST');
+    $result = $this->_post_api($params, 'http://localhost/honey_bee//api/login','POST');
+
    
         if($result['code']==1){ 
            

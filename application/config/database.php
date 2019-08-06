@@ -76,8 +76,10 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> 'mysql:host=localhost;dbname=prof',
 	'hostname' => "localhost",
-	'username' => "honeybee",
-	'password' => "Honey_Bee@2019",
+//	'username' => "honeybee",
+//	'password' => "Honey_Bee@2019",
+    'username' => "root",
+	'password' => "",
 	'database' => "honeybee_db",
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
