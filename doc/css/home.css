@@ -2,6 +2,19 @@
     height:100%;
     width: 100%;
     position:absolute;
-    background-color:rgb(243, 210, 9);
+    background-color:rgb(134, 120, 37);
     opacity:.7;
+}
+.overlay-divfr{
+    height:100%;
+    width: 100%;
+    position:absolute;
+    background-color:#3b285a;
+    opacity:.7;
+}
+
+.cards-flow{
+    position: absolute;
+    top: 230px;
+    left: 23%;
 }
