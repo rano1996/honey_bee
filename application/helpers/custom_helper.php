@@ -59,4 +59,24 @@
 	}
 
 
+            ));
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            // curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+            // curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
+            $result = curl_exec($ch);
+            // var_dump($result);
+            // exit;
+        } catch (Exception $e) {
+            return false;
+        }
+
+        curl_close($ch);
+        if ($result){
+            $result=json_decode($result,true);
+            return $result;
+        }
+        else
+            return false;
+    }
+}
   
