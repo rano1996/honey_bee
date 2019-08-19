@@ -281,6 +281,9 @@
                 <li><a href="<?php echo base_url('projects/projects_list') ?>" class="waves-effect"><i
                                 class="icon-logout fa-fw float_rtl"></i> <span class="hide-menu">Projects</span></a>
                 </li>
+                <li><a href="<?php echo base_url('memories/memories_list') ?>" class="waves-effect"><i
+                                class="icon-logout fa-fw float_rtl"></i> <span class="hide-menu">Memories</span></a>
+                </li>
 
                 <li><a href="<?php echo base_url('targets/target_list') ?>" class="waves-effect"><i
                                 class="icon-logout fa-fw float_rtl"></i> <span class="hide-menu">Targets</span></a></li>
