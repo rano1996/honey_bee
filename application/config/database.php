@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db='';
 if(base_url()=='http://localhost/honey_bee/'){
-    $db=array('username'=>'root','hostname'=>'localhost','password'=>'','db_name'=>'honey_bee');
+    $db=array('username'=>'root','hostname'=>'localhost','password'=>'','db_name'=>'honeybee_db');
 }
 else{
     $db=array('username'=>'honey_bee','hostname'=>'localhost','password'=>'Honey_Bee@2019','db_name'=>'honeybee_db');

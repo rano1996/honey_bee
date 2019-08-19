@@ -32,6 +32,11 @@
                             <li> <a href="<?php echo base_url('admin/revenues/revenue_list') ?>">revenue list</a></li>
                         </ul>
                     </li>
+                    <li> <a href="<?php echo base_url('projects/projects_list') ?>"
+                            class="waves-effect"><i class="icon-envelope p-r-10"></i>
+                            <span class="hide-menu"> Projects <span class="fa arrow"></span></span>
+                        </a>
+                    </li>
                     
 					
 					
