@@ -1,6 +1,9 @@
 
 <!--row -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<link href="../doc/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../doc/css/home.css" rel="stylesheet" type="text/css"/>
+
 <div class="row">
     <div class="col-lg-12">
 
@@ -47,7 +50,7 @@
                             <div class="r-icon-stats">
                                 <i class="ti-user bg-danger"></i>
                                 <div class="bodystate">
-                  
+
                                     <h4 style="color:white">5</h4>
                                     <span class="text-muted"><a href="" style="color:white">
 Total Admin</a></span>
@@ -149,6 +152,121 @@ Total Users</a></span>
 </div> -->
 <!--/row -->
 <!-- /.row -->
+
+
+<!-- <gallery-->
+<!-- <div class="row ">-->
+
+<div class="row white-box d-flex justify-content-center align-items-center  ">
+    <!--     month-->
+    <div class="col-12 text-center py-4">
+        <i class="fas fa-angle-double-left pr-5"></i>
+        <span class="bold display-4">June</span>
+        <i class="fas fa-angle-double-right pl-5"></i>
+    </div>
+    <!--    total row-->
+    <div class="col-md-3 py-2"></div>
+    <div class="col-2 py-4">
+        <span class="display-4">Total</span>
+    </div>
+    <div class="col-md-2 py-2"></div>
+    <div class="col-2 py-2">
+        <span class="display-3">120.000</span>
+    </div>
+    <div class="col-md-3 py-2"></div>
+
+    <!--    grid of cards-->
+    <div class="card-deck py-4">
+        <!--        first  cards-->
+        <div class="col-md-1 py-4">
+            <!--            <div class="card ">-->
+            <!--                <img class="card-img-top"-->
+            <!--                     src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"-->
+            <!--                     alt="Card image">-->
+            <!--                <div class="card-img-overlay overlay-div d-flex justify-content-center align-items-end">-->
+            <!--                    <h4 class="card-title text-white">John Doe</h4>-->
+            <!--                </div>-->
+            <!--            </div>-->
+        </div>
+        <div class="col-md-5 py-4 my-4">
+            <div class="card ">
+                <img class="card-img-top"
+                     src="https://images.unsplash.com/photo-1514108225820-2b602873ac36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80"
+                     alt="Card image">
+                <div class="card-img-overlay overlay-divfr d-flex justify-content-center align-items-center">
+                    <h4 class="card-title text-white  display-4">Expenditure</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 py-4 my-4">
+            <div class="card ">
+                <img class="card-img-top"
+                     src="https://images.unsplash.com/photo-1514108225820-2b602873ac36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80"
+                     alt="Card image">
+                <div class="card-img-overlay overlay-divfr d-flex justify-content-center align-items-center">
+                    <h4 class="card-title text-white  display-4">Revenue</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 py-4">
+            <!--            <div class="card ">-->
+            <!--                <img class="card-img-top"-->
+            <!--                     src="https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80"-->
+            <!--                     alt="Card image">-->
+            <!--                <div class="card-img-overlay overlay-div d-flex justify-content-center align-items-end">-->
+            <!--                    <h4 class="card-title text-white">John Doe</h4>-->
+            <!--                </div>-->
+            <!--            </div>-->
+        </div>
+        <!--        end of first row-->
+        <!--        second three cards-->
+        <div class="col-md-3 py-2">
+            <div class="card ">
+                <img class="card-img-top"
+                     src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                     alt="Card image">
+                <div class="card-img-overlay overlay-div d-flex justify-content-center align-items-end">
+                    <h4 class="card-title text-white  display-4">Target</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 py-2">
+            <div class="card ">
+                <img class="card-img-top"
+                     src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80"
+                     alt="Card image">
+                <div class="card-img-overlay overlay-div d-flex justify-content-center align-items-end">
+                    <h4 class="card-title text-white display-4">Projects</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 py-2">
+            <div class="card ">
+                <img class="card-img-top"
+                     src="https://images.unsplash.com/photo-1556740772-1a741367b93e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80"
+                     alt="Card image">
+                <div class="card-img-overlay overlay-div d-flex justify-content-center align-items-end">
+                    <h4 class="card-title text-white display-4">Budget</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 py-2">
+            <div class="card ">
+                <img class="card-img-top"
+                     src="https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80"
+                     alt="Card image">
+                <div class="card-img-overlay overlay-div d-flex justify-content-center align-items-end">
+                    <h4 class="card-title text-white display-4">Debts</h4>
+                </div>
+            </div>
+        </div>
+        <!--        end of second row-->
+    </div>
+</div>
+<!-- </div>-->
+<!-- end Gallery -->
+
+
 <div class="row">
     <h3>schedule work</h3>
     <div class="col-lg-12">
@@ -279,7 +397,7 @@ Total Users</a></span>
 </div>
 <div class="row">
     <div class="col-md-12">
-        <div class="white-box">
+        <div class="white-box pb-5">
 
 
 
@@ -293,6 +411,15 @@ Total Users</a></span>
                         <div class="card-block">
                             <center><h4 class="card-title">Total:5 Times</h4></center>
                             <center><h4 class="card-title">Remain:2 Times</h4></center>
+                        </div>
+                        <div class="card cards-flow  d-flex justify-content-center align-items-center m-5">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button class="btn btn-light"> +</button>
+                                <button class="btn btn-light"> |</button>
+                                <button class="btn btn-light"> 3</button>
+                                <button class="btn btn-light">|</button>
+                                <button class="btn btn-light"> +</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -580,4 +707,3 @@ Total Users</a></span>
 <script src="<?php echo base_url('optimum/js/chart-pie-demo.js')?>"></script>
 </div>
 
-    
