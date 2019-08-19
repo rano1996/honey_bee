@@ -47,7 +47,11 @@
                             <span class="hide-menu"> Memories <span class="fa arrow"></span></span>
                         </a>
                     </li>
-                    
+                    <li> <a href="<?php echo base_url('debts/debts_list') ?>"
+                            class="waves-effect"><i class="icon-envelope p-r-10"></i>
+                            <span class="hide-menu"> Debts <span class="fa arrow"></span></span>
+                        </a>
+                    </li>
 					
 					
 					

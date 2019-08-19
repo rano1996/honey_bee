@@ -56,17 +56,6 @@
                         </div>
                         <div class="timeline-body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus modi quam ipsum alias at est molestiae excepturi delectus nesciunt, quibusdam debitis amet, beatae consequuntur impedit nulla qui! Laborum, atque.</p>
-                            <hr>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-gear"></i> <span class="caret"></span> </button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Action</a> </li>
-                                    <li><a href="#">Another action</a> </li>
-                                    <li><a href="#">Something else here</a> </li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a> </li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </li>
