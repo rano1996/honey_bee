@@ -247,6 +247,8 @@
                <?php echo $main_content; ?>
                 <!-- /.row -->
 
+
+
         </div>
         <!-- /.container-fluid -->
         <?php include 'layout/footer.php'; ?>
