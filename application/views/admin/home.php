@@ -1,7 +1,9 @@
 <!--row -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-<link href="../doc/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
 <link href="../doc/css/home.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
 
 <div class="row">
     <div class="col-lg-12">
@@ -143,9 +145,9 @@ Total Users</a></span>
 <div class="row white-box d-flex justify-content-center align-items-center  ">
     <!--     month-->
     <div class="col-12 text-center py-4">
-        <i class="fas fa-angle-double-left pr-5"></i>
-        <span class="bold display-4">June</span>
-        <i class="fas fa-angle-double-right pl-5"></i>
+        <span class="bold display-4">&Lt;</span>
+        <span class="bold display-4 p-between">June</span>
+        <span class="bold display-4">&Gt;</span>
     </div>
     <!--    total row-->
     <div class="col-md-3 py-2"></div>
@@ -407,12 +409,12 @@ Total Users</a></span>
                             <center><h4 class="card-title">Remain:2 Times</h4></center>
                         </div>
                         <div class="card cards-flow  d-flex justify-content-center align-items-center m-5">
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <button class="btn btn-light"> +</button>
-                                <button class="btn btn-light"> |</button>
-                                <button class="btn btn-light"> 3</button>
-                                <button class="btn btn-light">|</button>
-                                <button class="btn btn-light"> +</button>
+                            <div class="btn-group controls-group" role="group" aria-label="Basic example">
+                                <a class="add-control">&minus;</a>
+                                <!--                                <a class="btn btn-light"> |</a>-->
+                                <a class="num-control"> 3</a>
+                                <!--                                <a class="btn btn-light">|</a>-->
+                                <a class="add-control"> &plus;</a>
                             </div>
                         </div>
                     </div>
@@ -425,6 +427,15 @@ Total Users</a></span>
                             <center><h4 class="card-title">Total:5 Times</h4></center>
                             <center><h4 class="card-title">Remain:2 Times</h4></center>
                         </div>
+                        <div class="card cards-flow  d-flex justify-content-center align-items-center m-5">
+                            <div class="btn-group controls-group" role="group" aria-label="Basic example">
+                                <a class="add-control">&minus;</a>
+                                <!--                                <a class="btn btn-light"> |</a>-->
+                                <a class="num-control"> 3</a>
+                                <!--                                <a class="btn btn-light">|</a>-->
+                                <a class="add-control"> &plus;</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -434,6 +445,15 @@ Total Users</a></span>
                         <div class="card-block">
                             <center><h4 class="card-title">Total:5 Times</h4></center>
                             <center><h4 class="card-title">Remain:2 Times</h4></center>
+                        </div>
+                        <div class="card cards-flow  d-flex justify-content-center align-items-center m-5">
+                            <div class="btn-group controls-group" role="group" aria-label="Basic example">
+                                <a class="add-control">&minus;</a>
+                                <!--                                <a class="btn btn-light"> |</a>-->
+                                <a class="num-control"> 3</a>
+                                <!--                                <a class="btn btn-light">|</a>-->
+                                <a class="add-control"> &plus;</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -695,6 +715,198 @@ Total Users</a></span>
 <!-- /.row -->
 
 <!-- Row -->
+
+
+<!--New page design-->
+
+<!-- Image and text -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light-custome">
+    <a class="navbar-brand logobard" href="#">Projects</a>
+    <!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
+    <!--        <span class="navbar-toggler-icon"></span>-->
+    <!--    </button>-->
+    <!--    <div class="collapse navbar-collapse" id="navbarNav">-->
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Total <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">30</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Projects</a>
+        </li>
+    </ul>
+    <!--    </div>-->
+</nav>
+<button type="button" class="btn btn-default btn-circle">&plus;</button>
+
+<!--List of Projects-->
+<div class="Container">
+    <div class="row">
+        <div class="col-md-3 py-5 text-center">
+            <div class="card">
+                <div class="card-body pb-5">
+                    <p class="card-text h3">Total : 220000 </p>
+                    <h5 class="card-title display-4" style="color: #cb19bd;">Project Name</h5>
+
+                    <p class="card-text">
+                        <small class="text-muted">Expenditure:12000</small>
+                    </p>
+                </div>
+                <div class="card-footer add-btn">
+                    <a>&plus;</a>
+                </div>
+            </div>
+        </div>
+        <!--    second card-->
+        <div class="col-md-3 py-5 text-center">
+            <div class="card">
+                <div class="card-body pb-5">
+                    <p class="card-text h3">Total : 220000 </p>
+                    <h5 class="card-title display-4" style="color: #cb19bd;">Project Name</h5>
+
+                    <p class="card-text">
+                        <small class="text-muted">Expenditure:12000</small>
+                    </p>
+                </div>
+                <div class="card-footer add-btn">
+                    <a>&plus;</a>
+                </div>
+            </div>
+        </div>
+        <!--third card -->
+        <div class="col-md-3 py-5 text-center">
+            <div class="card">
+                <div class="card-body pb-5">
+                    <p class="card-text h3">Total : 220000 </p>
+                    <h5 class="card-title display-4" style="color: #cb19bd;">Project Name</h5>
+
+                    <p class="card-text">
+                        <small class="text-muted">Expenditure:12000</small>
+                    </p>
+                </div>
+                <div class="card-footer add-btn">
+                    <a>&plus;</a>
+                </div>
+            </div>
+        </div>
+        <!--forth card-->
+        <div class="col-md-3 py-5 text-center">
+            <div class="card">
+                <div class="card-body pb-5">
+                    <p class="card-text h3">Total : 220000 </p>
+                    <h5 class="card-title display-4" style="color: #cb19bd;">Project Name</h5>
+
+                    <p class="card-text">
+                        <small class="text-muted">Expenditure:12000</small>
+                    </p>
+                </div>
+                <div class="card-footer add-btn">
+                    <a>&plus;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end new page design-->
+
+<!--New page design-->
+
+<!-- Image and text -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light-custome">
+    <a class="navbar-brand logobard" href="#">Targets</a>
+    <!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
+    <!--        <span class="navbar-toggler-icon"></span>-->
+    <!--    </button>-->
+    <!--    <div class="collapse navbar-collapse" id="navbarNav">-->
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Total <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">30</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Projects</a>
+        </li>
+    </ul>
+    <!--    </div>-->
+</nav>
+<button type="button" class="btn btn-default btn-circle">&plus;</button>
+<!--List of Target-->
+<div class="Container">
+    <div class="row">
+        <div class="col-md-3 py-5 text-center">
+            <div class="card">
+                <div class="card-body pb-5">
+                    <p class="card-text h3">Total : 220000 </p>
+                    <h5 class="card-title display-4" style="color: #cb19bd;">Project Name</h5>
+
+                    <p class="card-text">
+                        <small class="text-muted">Expenditure:12000</small>
+                    </p>
+                </div>
+                <div class="card-footer add-btn">
+                    <a>&plus;</a>
+                </div>
+            </div>
+        </div>
+        <!--    second card-->
+        <div class="col-md-3 py-5 text-center">
+            <div class="card">
+                <div class="card-body pb-5">
+                    <p class="card-text h3">Total : 220000 </p>
+                    <h5 class="card-title display-4" style="color: #cb19bd;">Project Name</h5>
+
+                    <p class="card-text">
+                        <small class="text-muted">Expenditure:12000</small>
+                    </p>
+                </div>
+                <div class="card-footer add-btn">
+                    <a>&plus;</a>
+                </div>
+            </div>
+        </div>
+        <!--third card -->
+        <div class="col-md-3 py-5 text-center">
+            <div class="card">
+                <div class="card-body pb-5">
+                    <p class="card-text h3">Total : 220000 </p>
+                    <h5 class="card-title display-4" style="color: #cb19bd;">Project Name</h5>
+
+                    <p class="card-text">
+                        <small class="text-muted">Expenditure:12000</small>
+                    </p>
+                </div>
+                <div class="card-footer add-btn">
+                    <a>&plus;</a>
+                </div>
+            </div>
+        </div>
+        <!--forth card-->
+        <div class="col-md-3 py-5 text-center">
+            <div class="card">
+                <div class="card-body pb-5">
+                    <p class="card-text h3">Total : 220000 </p>
+                    <h5 class="card-title display-4" style="color: #cb19bd;">Project Name</h5>
+
+                    <p class="card-text">
+                        <small class="text-muted">Expenditure:12000</small>
+                    </p>
+                </div>
+                <div class="card-footer add-btn">
+                    <a>&plus;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end new page design-->
+
+
+
+
 
 <!-- <script src="<?php echo base_url('optimum/js/Chart.min.js') ?>"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>  -->
