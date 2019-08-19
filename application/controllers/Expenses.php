@@ -17,66 +17,23 @@ class Expenses extends CI_Controller {
         $data = array();
         $data['page_title'] = 'expenses category';
 //        $data['result']= $this->_post_api($data, 'http://honey-bee.life/Financial_Api/expenses_category','GET');
-        $data['result']= $this->_post_api($data, 'http://localhost/honey_bee/Financial_Api/expenses_category','GET');
+        $data['result']=_post_api($data, 'Financial_Api/expenses_category','GET');
 
 
         $data['main_content'] = $this->load->view('expenses/expenses_category', $data, TRUE);
        
         $this->load->view('admin/index', $data);
     }
-    private function _post_api(Array $fields=null, $url,$method) {
-        try {
 
-            $ch = curl_init();
-            switch ($method){
-                case "POST":
-                   curl_setopt($ch, CURLOPT_POST, 1);
-                   if ($fields)
-                      curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
-                   break;
-                case "PUT":
-                   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
-                   if ($fields)
-                      curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);			 					
-                   break;
-                default:
-                   if ($fields)
-                      $url = sprintf("%s?%s", $url, http_build_query($fields));
-             }
-          
-            curl_setopt($ch, CURLOPT_URL, $url);
-            curl_setopt($ch, CURLOPT_TIMEOUT, 30);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                'lang: en',
-                
-             ));
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            // curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-            // curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
-            $result = curl_exec($ch);
-            // var_dump($result);
-            // exit;
-        } catch (Exception $e) {
-            return false;
-        }
-      
-        curl_close($ch);
-        if ($result){
-        $result=json_decode($result,true);
-            return $result;
-        }
-        else
-            return false;
-    }
     public function expenses_sub_category(){
         $data = array();
         
         $data['page_title'] = 'expenses sub category';
         $id=$this->uri->segment(3);
 //        $data['result']= $this->_post_api($data, 'http://honey-bee.life//Financial_Api/expenses_category_byid?id='.$id,'GET');
-        $data['result']= $this->_post_api($data, 'http://localhost/honey_bee//Financial_Api/expenses_category_byid?id='.$id,'GET');
+        $data['result']= _post_api($data, 'Financial_Api/expenses_category_byid?id='.$id,'GET');
 //        $data['category']= $this->_post_api($data, 'http://honey-bee.life//Financial_Api/expenses_category','GET');
-        $data['category']= $this->_post_api($data, 'http://localhost/honey_bee//Financial_Api/expenses_category','GET');
+        $data['category']= _post_api($data, 'Financial_Api/expenses_category','GET');
         $data['main_content'] = $this->load->view('expenses/expenses_sub_category', $data, TRUE);
        
 
@@ -104,7 +61,7 @@ class Expenses extends CI_Controller {
      'user_id'=>1
         );
 //       $result=$this->_post_api($data, 'http://honey-bee.life//Financial_Api/addexpenses','POST');
-       $result=$this->_post_api($data, 'http://localhost/honey_bee//Financial_Api/addexpenses','POST');
+       $result=_post_api($data, 'Financial_Api/addexpenses','POST');
        if($result['code']=='1'){
         redirect(base_url() . 'expenses/expenses_list', 'refresh');
        }

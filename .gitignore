@@ -3,6 +3,7 @@
 *.zip
 .svn
 .DS_Store
+.idea
 thumbs.db
 
 # Codeigniter files

@@ -1,72 +1,86 @@
 <!--row -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-
+<link href="../doc/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <link href="../doc/css/home.css" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
 
 <div class="row">
     <div class="col-lg-12">
-        <div class="panel panel-default">
-            <!-- <div class="panel-heading">Slide show with owl Carousel</div> -->
-            <div class="panel-wrapper p-b-10 collapse in">
-                <div id="owl-demo" class="owl-carousel owl-theme">
-                    <div class="item"><img src="<?php echo base_url(); ?>optimum/plugins/images/heading-bg/slide2.jpg"
-                                           alt="Owl Image"></div>
-                    <div class="item"><img src="<?php echo base_url(); ?>optimum/plugins/images/heading-bg/slide3.jpg"
-                                           alt="Owl Image"></div>
-                    <div class="item"><img src="<?php echo base_url(); ?>optimum/plugins/images/heading-bg/slide4.jpg"
-                                           alt="Owl Image"></div>
-                    <div class="item"><img src="<?php echo base_url(); ?>optimum/plugins/images/heading-bg/slide6.jpg"
-                                           alt="Owl Image"></div>
-                    <div class="item"><img src="<?php echo base_url(); ?>optimum/plugins/images/heading-bg/slide1.jpg"
-                                           alt="Owl Image"></div>
-                    <div class="item"><img src="<?php echo base_url(); ?>optimum/plugins/images/heading-bg/slide3.jpg"
-                                           alt="Owl Image"></div>
+
+        <div class="white-box">
+
+            <!-- START carousel-->
+            <div id="carousel-example-captions" data-ride="carousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-captions" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-captions" data-slide-to="2"></li>
+                </ol>
+                <div role="listbox" class="carousel-inner">
+                    <div class="carousel-item active"> <img src="<?php echo base_url(); ?>optimum/plugins/images/heading-bg/slide2.jpg" alt="Owl Image">
+                        <div class="carousel-caption">
+                            <h3 class="text-white font-600">Model Showing off</h3>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item"> <img src="<?php echo base_url(); ?>optimum/plugins/images/heading-bg/slide3.jpg" alt="Owl Image">
+                        <div class="carousel-caption">
+                            <h3 class="text-white font-600">Mountaing Climbing</h3>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item"> <img src="<?php echo base_url(); ?>optimum/plugins/images/heading-bg/slide3.jpg" alt="Owl Image">
+                        <div class="carousel-caption">
+                            <h3 class="text-white font-600">Fire camp on hill</h3>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        </div>
+                    </div>
                 </div>
+                <a href="#carousel-example-captions" role="button" data-slide="prev" class="left carousel-control"> <span aria-hidden="true" class="fa fa-angle-left"></span> <span class="sr-only">Previous</span> </a>
+                <a href="#carousel-example-captions" role="button" data-slide="next" class="right carousel-control"> <span aria-hidden="true" class="fa fa-angle-right"></span> <span class="sr-only">Next</span> </a>
             </div>
+            <!-- END carousel-->
         </div>
+
     </div>
 </div>
-<!-- <h1>gfgffg</h1>
-               <div class="row">
-                   <div class="col-md-3 col-sm-6">
-                       <div class="white-box bg-danger">
-                           <div class="r-icon-stats">
-                               <i class="ti-user bg-danger"></i>
-                               <div class="bodystate">
+<!-- <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="white-box bg-danger">
+                            <div class="r-icon-stats">
+                                <i class="ti-user bg-danger"></i>
+                                <div class="bodystate">
 
-                                   <h4 style="color:white">5</h4>
-                                   <span class="text-muted"><a href="" style="color:white">
+                                    <h4 style="color:white">5</h4>
+                                    <span class="text-muted"><a href="" style="color:white">
 Total Admin</a></span>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-3 col-sm-6">
-                       <div class="white-box bg-info">
-                           <div class="r-icon-stats">
-                               <i class="ti-shopping-cart bg-info"></i>
-                               <div class="bodystate">
-                                   <h4 style="color:white">2</h4>
-                                   <span class="text-muted"><a href="" style="color:white">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="white-box bg-info">
+                            <div class="r-icon-stats">
+                                <i class="ti-shopping-cart bg-info"></i>
+                                <div class="bodystate">
+                                    <h4 style="color:white">2</h4>
+                                    <span class="text-muted"><a href="" style="color:white">
 Active Users</a></span>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-3 col-sm-6">
-                       <div class="white-box bg-success">
-                           <div class="r-icon-stats">
-                               <i class="ti-wallet bg-success"></i>
-                               <div class="bodystate">
-                                   <h4 style="color:white">1</h4>
-                                   <span class="text-muted"><a href="" style="color:white">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="white-box bg-success">
+                            <div class="r-icon-stats">
+                                <i class="ti-wallet bg-success"></i>
+                                <div class="bodystate">
+                                    <h4 style="color:white">1</h4>
+                                    <span class="text-muted"><a href="" style="color:white">
 Inactive User</a></span>
-                               </div>
-                           </div>
-                       </div>
-                   </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>  -->
 <!-- <div class="col-md-3 col-sm-6">
     <div class="white-box bg-purple">
         <div class="r-icon-stats">
@@ -264,19 +278,13 @@ Total Users</a></span>
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h4 class="modal-title"><strong>Add Event</strong></h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
-                                </button>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             </div>
                             <div class="modal-body"></div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close
-                                </button>
-                                <button type="button" class="btn btn-success save-event waves-effect waves-light">Create
-                                    event
-                                </button>
-                                <button type="button" class="btn btn-danger delete-event waves-effect waves-light"
-                                        data-dismiss="modal">Delete
-                                </button>
+                                <button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success save-event waves-effect waves-light">Create event</button>
+                                <button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
                             </div>
                         </div>
                     </div>
@@ -287,21 +295,18 @@ Total Users</a></span>
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h4 class="modal-title"><strong>Add</strong> a category</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
-                                </button>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             </div>
                             <div class="modal-body">
                                 <form>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label class="control-label">Category Name</label>
-                                            <input class="form-control form-white" placeholder="Enter name" type="text"
-                                                   name="category-name"/>
+                                            <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name" />
                                         </div>
                                         <div class="col-md-6">
                                             <label class="control-label">Choose Category Color</label>
-                                            <select class="form-control form-white" data-placeholder="Choose a color..."
-                                                    name="category-color">
+                                            <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
                                                 <option value="success">Success</option>
                                                 <option value="danger">Danger</option>
                                                 <option value="info">Info</option>
@@ -314,11 +319,8 @@ Total Users</a></span>
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-danger waves-effect waves-light save-category"
-                                        data-dismiss="modal">Save
-                                </button>
-                                <button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close
-                                </button>
+                                <button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
+                                <button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -331,8 +333,7 @@ Total Users</a></span>
 </div>
 <div class="row">
     <div class="col-lg-12">
-        <script src="https://www.powr.io/powr.js?platform=html"></script>
-        <div class="powr-weather" id="0e1d3ec5_1563981670"></div>
+        <script src="https://www.powr.io/powr.js?platform=html"></script><div class="powr-weather" id="0e1d3ec5_1563981670"></div>
     </div>
 </div>
 <!-- <h3>Learn new words</h3>
@@ -421,8 +422,7 @@ Total Users</a></span>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img class="card-img-top image-responsive"
-                             src="<?php echo base_url(); ?>optimum/plugins/images/cards/10.png" alt="Card image cap">
+                        <img class="card-img-top image-responsive" src="<?php echo base_url(); ?>optimum/plugins/images/cards/10.png" alt="Card image cap">
                         <div class="card-block">
                             <center><h4 class="card-title">Total:5 Times</h4></center>
                             <center><h4 class="card-title">Remain:2 Times</h4></center>
@@ -440,8 +440,7 @@ Total Users</a></span>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img class="card-img-top image-responsive"
-                             src="<?php echo base_url(); ?>optimum/plugins/images/cards/11.png" alt="Card image cap">
+                        <img class="card-img-top image-responsive" src="<?php echo base_url(); ?>optimum/plugins/images/cards/11.png" alt="Card image cap">
                         <div class="card-block">
                             <center><h4 class="card-title">Total:5 Times</h4></center>
                             <center><h4 class="card-title">Remain:2 Times</h4></center>
@@ -716,6 +715,7 @@ Total Users</a></span>
 
 <!-- Row -->
 
+<!-- <script src="<?php echo base_url('optimum/js/Chart.min.js')?>"></script> -->
 
 <!--New page design-->
 
@@ -912,6 +912,6 @@ Total Users</a></span>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>  -->
 <!-- Page level custom scripts -->
 
-<script src="<?php echo base_url('optimum/js/chart-pie-demo.js') ?>"></script>
+<script src="<?php echo base_url('optimum/js/chart-pie-demo.js')?>"></script>
 </div>
 

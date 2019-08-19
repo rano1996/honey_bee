@@ -27,7 +27,7 @@ $url="http://localhost/honey_bee/";
     <?php 
     if($this->session->userdata('lang')=='en')
     {
-        echo '<link href="'.$url.'/optimum/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">';
+        echo '<link href="'.base_url().'/optimum/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">';
         
     }
 else{
@@ -67,7 +67,7 @@ else{
     if($this->session->userdata('lang')=='ar')
     {
       
-        echo '<link href="'.$url.'/optimum/rtl.css" rel="stylesheet">';
+        echo '<link href="'.base_url().'/optimum/rtl.css" rel="stylesheet">';
     }
 
     ?>
