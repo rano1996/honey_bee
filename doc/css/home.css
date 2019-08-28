@@ -1,20 +1,76 @@
-.overlay-div{
-    height:100%;
+.overlay-div {
+    height: 100%;
     width: 100%;
-    position:absolute;
-    background-color:rgb(134, 120, 37);
-    opacity:.7;
-}
-.overlay-divfr{
-    height:100%;
-    width: 100%;
-    position:absolute;
-    background-color:#3b285a;
-    opacity:.7;
+    position: absolute;
+    background-color: rgb(134, 120, 37);
+    opacity: .7;
 }
 
-.cards-flow{
+.overlay-divfr {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #3b285a;
+    opacity: .7;
+}
+
+.cards-flow {
     position: absolute;
     top: 230px;
     left: 23%;
+}
+
+
+.controls-group {
+    padding: 8px;
+}
+
+.add-control {
+    padding: 0px 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.num-control {
+    padding: 0px 10px;
+    font-size: 17px;
+}
+
+.p-between {
+    padding: 0px 30px;
+}
+
+
+/*new page deign*/
+.logobard {
+    height: unset;
+}
+
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    padding: 6px 0px !important;
+    border-radius: 49px !important;
+    text-align: center !important;
+    font-size: 30px !important;
+    line-height: 0.42857 !important;
+    position: relative;
+    top: -44px;
+    left: 50%;
+    background-color: #9675ce !important;
+}
+
+.bg-light-custome {
+    background-color: #FEF102 !important;
+}
+
+.add-btn{
+    width: 45px;
+    position: absolute;
+    top: 152px;
+    left: 39%;
+    background: #9675ce !important;
+    border-radius: 50px !important;
+    font-size: 20px;
+    cursor: pointer;
 }

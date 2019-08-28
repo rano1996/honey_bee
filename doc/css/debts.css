@@ -1,0 +1,35 @@
+.red {
+    color: red;
+}
+
+
+.card .card__corner {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 4em;
+    height: 4em;
+    background-color: #ffffff;
+}
+
+.card .card__corner .card__corner-triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 4em 4em 0;
+    border-color: transparent transparent red transparent;
+}
+
+.green{
+    color: green;
+}
+
+.card .card__corner .card__corner-triangle-green {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 4em 4em 0;
+    border-color: transparent transparent green transparent;
+}

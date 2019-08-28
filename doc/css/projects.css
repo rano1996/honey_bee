@@ -1,0 +1,47 @@
+
+/*new page deign*/
+.logobard {
+    height: unset;
+}
+
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    padding: 6px 0px !important;
+    border-radius: 49px !important;
+    text-align: center !important;
+    font-size: 30px !important;
+    line-height: 0.42857 !important;
+    position: relative;
+    top: -44px;
+    left: 50%;
+    background-color: #9675ce !important;
+    -webkit-box-shadow: 7px 10px 25px -10px rgba(0,0,0,0.62);
+    -moz-box-shadow: 7px 10px 25px -10px rgba(0,0,0,0.62);
+    box-shadow: 7px 10px 25px -10px rgba(0,0,0,0.62);
+}
+
+.bg-light-custome {
+    background-color: #FEF102 !important;
+}
+
+.add-btn-left{
+    /*width: 45px;*/
+    position: absolute;
+    top: 141px;
+    left: 10%;
+    background: #9675ce !important;
+    border-radius: 50px !important;
+    font-size: 20px;
+    cursor: pointer;
+}
+.add-btn-right{
+    /*width: 45px;*/
+    position: absolute;
+    top: 141px;
+    left: 65%;
+    background: #9675ce !important;
+    border-radius: 50px !important;
+    font-size: 20px;
+    cursor: pointer;
+}
