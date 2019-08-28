@@ -1,8 +1,9 @@
 <?php
 
-require(APPPATH.'/libraries/REST_Controller.php');
- 
-class Api extends REST_Controller{
+// require(APPPATH.'/libraries/REST_Controller.php');
+require_once APPPATH . '/core/BD_Controller.php';
+use \Firebase\JWT\JWT;
+class Api extends BD_Controller{
     
     public function __construct()
     {
@@ -45,7 +46,7 @@ class Api extends REST_Controller{
        
         $email  = $this->post('email');
         $password  = $this->post('password');
-        
+        $kunci = $this->config->item('thekey');
         if(!$email && !$password){
             $result=array('code'=>'-2','msg'=>'please insert email or password');
             $this->response($result, 400);
@@ -56,7 +57,30 @@ class Api extends REST_Controller{
         $result = $this->login_model->validate_user1($email,$password);
 
         if($result){
-            $result=array('code'=>'1','data'=>$result);
+            $token['id'] = $result->id;  //From here
+            $token['username'] = $result->first_name;
+            $date = new DateTime();
+            $token['iat'] = $date->getTimestamp();
+            $token['exp'] = $date->getTimestamp() + 60*60*5; //To here is to generate token
+            $output = JWT::encode($token,$kunci );
+            unset($result->role);
+            unset($result->password);
+            date_default_timezone_set('Asia/Damascus');
+            $update_date=date('Y-m-d');
+           
+             $update_date=strtotime('+7 days');
+             $update_date=date('Y-m-d H:i:s',$update_date);
+              $data=array('tokens'=>$output,'update_date'=>$update_date,'user_id'=>$result->id);
+              $insert=$this->login_model->add($data);
+              if($insert === 0){
+                
+                $result=array('code'=>'-1','msg'=>'Error received please try later');
+                $this->response($result, 404);
+                exit;
+            
+               }
+               else{
+            $result=array('code'=>'1','data'=>$result,'token'=>$output);
             $this->response($result, 200); 
 
             exit;

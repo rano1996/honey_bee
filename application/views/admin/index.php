@@ -257,4 +257,8 @@
 </div>
 <!-- /#wrapper -->
 <!-- jQuery -->
+
+
+
+
 <?php include 'layout/js.php'; ?>

@@ -1,108 +1,47 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-// *************************************************************************
-// *                                                                       *
-// * Optimum LinkupComputers                              *
-// * Copyright (c) Optimum LinkupComputers. All Rights Reserved                     *
-// *                                                                       *
-// *************************************************************************
-// *                                                                       *
-// * Email: info@optimumlinkupsoftware.com                                 *
-// * Website: https://optimumlinkup.com.ng								   *
-// * 		  https://optimumlinkupsoftware.com							   *
-// *                                                                       *
-// *************************************************************************
-// *                                                                       *
-// * This software is furnished under a license and may be used and copied *
-// * only  in  accordance  with  the  terms  of such  license and with the *
-// * inclusion of the above copyright notice.                              *
-// *                                                                       *
-// *************************************************************************
+<?php
 
-//LOCATION : application - controller - Auth.php
+defined('BASEPATH') OR exit('No direct script access allowed');
+require_once APPPATH . '/core/BD_Controller.php';
+use \Firebase\JWT\JWT;
 
-class Auth extends CI_Controller {
+class Auth extends BD_Controller {
 
-    public function __construct(){
+    function __construct()
+    {
+        // Construct the parent class
         parent::__construct();
-        // $this->load->model('login_model');
-        // $this->load->library('REST_Controller', array('server' => 'localhost/codeigniterTemplate'));
+        // Configure limits on our controller methods
+        // Ensure you have created the 'limits' table and enabled 'limits' within application/config/rest.php
+        $this->methods['users_get']['limit'] = 500; // 500 requests per hour per user/key
+        $this->methods['users_post']['limit'] = 100; // 100 requests per hour per user/key
+        $this->methods['users_delete']['limit'] = 50; // 50 requests per hour per user/key
+        $this->load->model('M_main');
     }
 
-
-    public function index(){
-        $data = array();
-        $data['page'] = 'Auth';
-        $this->load->view('admin/login', $data);
-    }
-
-
-
- /****************Function login**********************************
-     * @type            : Function
-     * @function name   : log
-     * @description     : Authenticatte when uset try lo login. 
-     *                    if autheticated redirected to logged in user dashboard.
-     *                    Also set some session date for logged in user.   
-     * @param           : null 
-     * @return          : null 
-     * ********************************************************** */
     
-    public function log(){
 
-$params = array(
-    'email' => $this->input->post('user_name'),
-    'password' => $this->input->post('password'),
-    
-    );
-//    $result = $this->_post_api($params, 'http://honey-bee.life//api/login','POST');
-    $result = _post_api($params, 'api/login','POST');
-
-   
-        if($result['code']==1){ 
-           
-            
-            //-- if valid
-            
-                $data = array();
-               
-                    $data = array(
-                        'id' => $result['data']['id'],
-                        'name' => $result['data']['first_name'],
-                        'email' =>$result['data']['email'],
-                        'is_login' => TRUE
-                    );
-                   
-                    $this->session->set_userdata($data);
-                    if(!isset($this->session->userdata['lang'])){
-                        $this->session->set_userdata(array('lang'=>'en'));
-                    }
-                    $url = base_url('admin/dashboard');
-                
-				redirect(base_url() . 'admin/dashboard', 'refresh');
-           
-            
-        }else{
-            redirect(base_url() . 'auth', 'refresh');
+    public function login_post()
+    {
+        $u = $this->post('username'); //Username Posted
+        $p = sha1($this->post('password')); //Pasword Posted
+        $q = array('username' => $u); //For where query condition
+        $kunci = $this->config->item('thekey');
+        $invalidLogin = ['status' => 'Invalid Login']; //Respon if login invalid
+        $val = $this->M_main->get_user($q)->row(); //Model to get single data row from database base on username
+        if($this->M_main->get_user($q)->num_rows() == 0){$this->response($invalidLogin, REST_Controller::HTTP_NOT_FOUND);}
+		$match = $val->password;   //Get password for user from database
+        if($p == $match){  //Condition if password matched
+        	$token['id'] = $val->id;  //From here
+            $token['username'] = $u;
+            $date = new DateTime();
+            $token['iat'] = $date->getTimestamp();
+            $token['exp'] = $date->getTimestamp() + 60*60*5; //To here is to generate token
+            $output['token'] = JWT::encode($token,$kunci ); //This is the output token
+            $this->set_response($output, REST_Controller::HTTP_OK); //This is the respon if success
+        }
+        else {
+            $this->set_response($invalidLogin, REST_Controller::HTTP_NOT_FOUND); //This is the respon if failed
         }
     }
-
- /*     * ***************Function logout**********************************
-     * @type            : Function
-     * @function name   : logout
-     * @description     : Log Out the logged in user and redirected to Login page  
-     * @param           : null 
-     * @return          : null 
-     * ********************************************************** */
-    
-    function logout(){
-        $this->session->sess_destroy();
-        $data = array();
-        $data['page'] = 'logout';
-        $this->load->view('admin/login', $data);
-    }
-
-   
-
-
 
 }

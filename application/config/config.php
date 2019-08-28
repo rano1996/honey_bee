@@ -25,13 +25,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $root=(isset($_SERVER['HTTPS']) ? "https://" : "http://").$_SERVER['HTTP_HOST'];
 $root.= str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
-//$config['base_url'] = 'http://honey-bee.life/';
 if($root='http://localhost/honey_bee')
-{
-    $config['base_url'] = $root;
+{ 
+$config['base_url'] = $root;
 }
 else{
-    $config['base_url'] = 'http://honey-bee.life';
+    $config['base_url'] = 'http://honey-bee.life'; 
 }
 
 /*
@@ -462,7 +461,7 @@ $config['csrf_token_name'] = 'csrf_test_name';
 $config['csrf_cookie_name'] = 'csrf_cookie_name';
 $config['csrf_expire'] = 7200;
 $config['csrf_regenerate'] = TRUE;
-$config['csrf_exclude_uris'] = array('Langswitcher/change_lang','api/addBook','api/login','Financial_Api/addCategoryexpenses','Financial_Api/addCategoryrevenue','Financial_Api/addexpenses','Financial_Api/addrevenue');
+$config['csrf_exclude_uris'] = array('main/test','auth/login','Langswitcher/change_lang','api/addBook','api/login','Financial_Api/addCategoryexpenses','Financial_Api/addCategoryrevenue','Financial_Api/addexpenses','Financial_Api/addrevenue','Budget_Api/AddBudget','Budget_Api/EditBudget','Project_Api/AddProjectExpenses','Project_Api/AddProjectRevenue','Project_Api/AddProject','Target_Api/AddTargetMoney','Target_Api/UpdateTargetStatus','Target_Api/AddTarget','Memories_Api/AddMemory','Notes_Api/AddNote','Schedulework_Api/AddEvent','Schedulework_Api/UpdateEvent','Debt_Api/AddDebt','Debt_Api/AddLoan','Debt_Api/AddLoanAmount','Project_Api/login','Project_Api/get_me_data');
 
 /*
 |--------------------------------------------------------------------------
@@ -530,3 +529,4 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+$config['thekey']='ValarMorghulis!'; 

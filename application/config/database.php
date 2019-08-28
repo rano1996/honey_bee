@@ -75,32 +75,30 @@ $query_builder = TRUE;
 
 $db='';
 if(base_url()=='http://localhost/honey_bee/'){
-    $db=array('username'=>'root','hostname'=>'localhost','password'=>'','db_name'=>'honey_bee');
+$db=array('username'=>'root','hostname'=>'localhost','password'=>'','db_name'=>'honey_bee');
 }
 else{
-    $db=array('username'=>'honey_bee','hostname'=>'localhost','password'=>'Honey_Bee@2019','db_name'=>'honeybee_db');
+	$db=array('username'=>'honey_bee','hostname'=>'localhost','password'=>'Honey_Bee@2019','db_name'=>'honeybee_db');
 }
 $db['default'] = array(
-    'dsn'	=> 'mysql:host=localhost;dbname=prof',
-    'hostname' => $db['hostname'],
-    'username' => $db['username'],
-    'password' => $db['password'],
-    'database' => $db['db_name'],
-    'dbdriver' => 'mysqli',
-    'dbprefix' => '',
-    'pconnect' => FALSE,
-    'db_debug' => (ENVIRONMENT !== 'production'),
-    'cache_on' => FALSE,
-    'cachedir' => '',
-    'char_set' => 'utf8',
-    'dbcollat' => 'utf8_general_ci',
-    'swap_pre' => '',
-    'encrypt' => FALSE,
-    'compress' => FALSE,
-    'stricton' => FALSE,
-    'failover' => array(),
-    'save_queries' => TRUE
+	'dsn'	=> 'mysql:host=localhost;dbname=prof',
+	'hostname' => $db['hostname'],
+	'username' => $db['username'],
+	'password' => $db['password'],
+	'database' => $db['db_name'],
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
 );
-
-
 
